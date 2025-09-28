@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Smart Study Planner</h1>
+
+    <button id="toggle-theme">🌙 Toggle Dark Mode</button>
+    <button id="calendar-btn">📅 View Calendar</button>
+    <button id="export-btn">📤 Export Tasks</button>
+
+    <form id="task-form">
+      <input type="text" id="task-name" placeholder="Task name" required />
+      <input type="date" id="task-deadline" required />
+      <select id="task-priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="text" id="task-subject" placeholder="Subject" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search by subject..." />
+    </div>
+
+    <ul id="task-list"></ul>
+    <div id="dashboard"></div>
+  </div>
+
+  <!-- Calendar Modal -->
+  <div id="calendar-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-calendar" class="close">&times;</span>
+      <h3>📅 Tasks by Date</h3>
+      <input type="date" id="calendar-date" />
+      <ul id="calendar-tasks"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
